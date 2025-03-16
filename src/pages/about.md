@@ -3,4 +3,4 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-我是谁？有时候我也对自己感到陌生
+There is nothing to say about me. I am just a simple person among 70+ billion.
