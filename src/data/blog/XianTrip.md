@@ -1,6 +1,6 @@
 ---
 title: ✈西安游记
-description: 给他们来一点小小的十三朝古都震撼
+description: 一点小小的古都震撼
 author: Johnny
 pubDatetime: 2021-07-30T10:26:00Z
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: 🔧JD手机数据爬虫
-description: 使用Python爬取京东上的手机销售数据
+description: 爬取京东上的手机销售数据
 author: Johnny
 pubDatetime: 2020-06-05T10:26:00Z
 featured: false

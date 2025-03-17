@@ -1,6 +1,6 @@
 ---
 title: ✈珠海游记
-description: 珠海真是一个悠闲的城市，很适合养老
+description: 珠海真是一个悠闲的城市，适合养老
 author: Johnny
 pubDatetime: 2022-03-07T00:16:00Z
 featured: false

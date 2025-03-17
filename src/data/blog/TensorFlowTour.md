@@ -1,6 +1,6 @@
 ---
 title: 📖TensorFlow踩坑记录
-description: Emm...为什么要选修自然语言处理课
+description: Emm...自然语言处理课
 author: Johnny
 pubDatetime: 2021-12-21T14:13:47Z
 featured: false
