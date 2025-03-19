@@ -4,10 +4,12 @@ description: 汽车软件工程课程Lab
 author: Johnny
 pubDatetime: 2021-12-09T19:00:56Z
 featured: false
-draft: true
+draft: false
 tags:
   - Course Lab
 ---
+
+> 本篇博客在数据迁移过程中部分图片丢失。
 
 # Lab0-自己创建CA证书
 
@@ -32,7 +34,7 @@ sudo service nginx start
 
 之后在Windows浏览器输入`http:localhost`就可以看到Nginx的默认页面
 
-![安装成功](https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvYy8yMDNhZDEyNTIxNDAyYTk0L0lRUUdNc19fX2kzYlJKNEZ3QVp0b1o3VkFiM1cwcjBqeDZ4cHh5M0toZVhlRktRP3dpZHRoPTEwMjQ.png)
+![安装成功](https://assets.beyh.net/211208-1.png)
 
 然后安装OpenSSL依赖
 
@@ -121,13 +123,13 @@ service nginx status #查看Nginx运行状态
 
 我在Windows中使用的是Edge浏览器，需要在Edge的设置->隐私、搜索和服务->安全性->管理证书中，将前文创建的`RootCA.crt`文件导入受信任的根证书颁发机构中，成功导入之后就可以看到自己的证书啦。
 
-![成功导入](https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvYy8yMDNhZDEyNTIxNDAyYTk0L0lRUlNOSkJXcHJUVVNaRU9aOFhPR1BnY0FWZXlQX200TzRrT2piYW5PdmZqVlB3P3dpZHRoPTEwMjQ.png)
+![成功导入](https://assets.beyh.net/211208-2.png)
 
 ## 测试HTTPS
 
 打开Edge浏览器，输入`https://localhost`，发现已经成功开启HTTPS访问，并且域名左边有一把🔒，说明证书是有效的，至此实验完成。
 
-![](https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvYy8yMDNhZDEyNTIxNDAyYTk0L0lRVHE1ZHV0bEgtM1E0bTFHR3ZKdzlYYkFWWXBOUGlDQ0FIdTFjbmdCdkY1bVcwP3dpZHRoPTEwMjQ.png)
+![](https://assets.beyh.net/211208-3.png)
 
 ## 参考链接
 
@@ -172,11 +174,11 @@ ICMP重定向信息是路由器向主机提供实时的路由信息，当一个�
 
    此时被攻击的主机无法上网，Ping命令显示Redirect Host。
 
-   ![Ping](https://bl6pap004files.storage.live.com/y4mlbDymsIsBrgcjZflQAC6d9g5m2moF7tZOnnunR3rltBLhk-r7xgYtV3IfwQ4ETjKxcv6NVcUfHvrR8QOFMxRMbFILdq1SB-0RnmmBTNqE_AGZtWPHgoGhZWtuEWubDqsZCj_ymSu9y21oggSTfkvjZonPdNp8Ca-PDWcKF3FwQ1IggHNOGxzYoTVrvtz0KFA?width=1323&height=692&cropmode=none)
+   <!-- ![Ping](https://bl6pap004files.storage.live.com/y4mlbDymsIsBrgcjZflQAC6d9g5m2moF7tZOnnunR3rltBLhk-r7xgYtV3IfwQ4ETjKxcv6NVcUfHvrR8QOFMxRMbFILdq1SB-0RnmmBTNqE_AGZtWPHgoGhZWtuEWubDqsZCj_ymSu9y21oggSTfkvjZonPdNp8Ca-PDWcKF3FwQ1IggHNOGxzYoTVrvtz0KFA?width=1323&height=692&cropmode=none) -->
 
    通过WireShark可以抓到ICMP重定向包。
 
-   ![抓包](https://bl6pap004files.storage.live.com/y4mkSnAnu2Z8kW8RB5lF5yFD6a0k0FMQuM4hcQ2kt9b3dTFv36kJnK_1RWiOgMUdQinumu2YXvLhB-NJOtWOAxMlnXab1EkKZg35AI8nrj9_Jimw_1ru3U-RZ-HHXaqTr_BfQjKVrvXD-JCK24Li-XFhGetGx8dIoU77ORi1VPw6Oj_2iJN3LGvFNSg63wpCPfm?width=866&height=763&cropmode=none)
+   <!-- ![抓包](https://bl6pap004files.storage.live.com/y4mkSnAnu2Z8kW8RB5lF5yFD6a0k0FMQuM4hcQ2kt9b3dTFv36kJnK_1RWiOgMUdQinumu2YXvLhB-NJOtWOAxMlnXab1EkKZg35AI8nrj9_Jimw_1ru3U-RZ-HHXaqTr_BfQjKVrvXD-JCK24Li-XFhGetGx8dIoU77ORi1VPw6Oj_2iJN3LGvFNSg63wpCPfm?width=866&height=763&cropmode=none) -->
 
 2. 使用Raw Socket实现ICMP重定向，对指定IP的主机实施重定向攻击。
 
@@ -329,7 +331,7 @@ ICMP重定向信息是路由器向主机提供实时的路由信息，当一个�
 
 运行效果：
 
-![运行效果](https://bl6pap004files.storage.live.com/y4mlzg0bESBfeS6OQ-yUDobDUG5GQwmACGOe6aFTOIm3Ke9EyU5rtXMcFACQubS04UIwu1xHEIbrNKhE-JaOiK1AthNQVEoBQjH0Zp-7lE5TQSwqNqjO4uznKx1JdrV8BLBvBYt_wYLUvJEK-lHbTyXBmue9jI3oXp7EFmnyis_oHQON6PKID5T-9aWeFHAmvLC?width=964&height=534&cropmode=none)
+<!-- ![运行效果](https://bl6pap004files.storage.live.com/y4mlzg0bESBfeS6OQ-yUDobDUG5GQwmACGOe6aFTOIm3Ke9EyU5rtXMcFACQubS04UIwu1xHEIbrNKhE-JaOiK1AthNQVEoBQjH0Zp-7lE5TQSwqNqjO4uznKx1JdrV8BLBvBYt_wYLUvJEK-lHbTyXBmue9jI3oXp7EFmnyis_oHQON6PKID5T-9aWeFHAmvLC?width=964&height=534&cropmode=none) -->
 
 
 
@@ -367,7 +369,7 @@ Linux的防火墙由netfilter和iptables组成。用户空间的iptables制定�
 
 默认的状态如下，用户机`192.168.10.131`只可以访问虚拟机B`192.168.10.1`上提供的nginx网页服务，但是无法访问虚拟机A`192.168.10.129`。
 
-![默认状态](https://bl6pap004files.storage.live.com/y4mfG5rviO4LF-mtPZhlu10Ndm1MTv-O7ifHdaUCFSzbkPtwY-V-V-AbPtRTDYyZb5fiOBV_62P8_CKGaV008AT8xaqyNoXzJ31zmir9b8Gv6PRm5RzDzAAA4-9JKwPvlnHyBNv65tA_B_r6XZ0RulInWOginovC1tPSeWv1dDxcYFlNZ0sS2VPVwD7Gi-f4buB?width=1037&height=1091&cropmode=none)
+![默认状态](https://assets.beyh.net/220503-4.png)
 
 首先在代理机开启转发数据包功能，命令如下
 
@@ -379,7 +381,7 @@ echo 1 > ip_forward
 
 iptables有四张表、五条链如下图所示
 
-![iptables的整体结构](https://bl6pap004files.storage.live.com/y4m7vfST3jZR3c6DhtLlJrzh3wPKSNGXoETguhfI5Wx-vqjOekGioNocxjcr6xBWBnQfGoH2luO5ZM96b1BSaDESDBWsvWt6X-S60uAS-8sCbp-1iFvE7EeY0D2XyP3KYhv7UVvl-DVaBC9L02d8dm87FS4ZP-bcxBY5lm3-OXqy5avqQhZla_NAqeSD6nQgRx0?width=766&height=458&cropmode=none)
+![iptables的整体结构](https://assets.beyh.net/220503-1.png)
 
 
 
@@ -410,11 +412,11 @@ iptables的命令参数如下：
 
 通过命令`iptables -t nat -L -n --line-numbers`可以查看配置后的NAT表
 
-![修改后的nat表](https://bl6pap004files.storage.live.com/y4m3uxuoT8M8sAc8LWKMfm8J-P_Rk_vSWaba9qyqd-llXSRMapmVY_QOLudphhYzGMb2mPvvIKBLbzXknXPI1eAHP7VdJDvCqLuhLKH7_jvYKnXn40Y35GApRZfknxOORSvE14BKDOHu2JTKx0kfWW_qZkp1r7_e4fO-5TaRwQSWyctMgK-iCsrxvxI_hAa0PZA?width=1229&height=410&cropmode=none)
+![修改后的nat表](https://assets.beyh.net/220503-3.png)
 
 可以查看修改后的效果，用户机既可以通过访问虚拟机A`192.168.10.129`来获取实际运行在虚拟机B`192.168.10.1`上的nginx默认网页，也可以直接访问虚拟机B。
 
-![反向代理](https://bl6pap004files.storage.live.com/y4mLFYrDxs1vfnTbNUuNwRWmNhjkX-DmW7fj6woExpIH4Rd07WXiuupOLVb_fXWBR2WIcPL_sU5d1799MZfP8izJdm1etOuiSTcKTaSDvW6uSq6igX1uw7_jnX7NBr7MpL-4iLPB_fu4LFJBMrW0hSUb4Y_VSe_w31LvP0usDlMwqB5hM0yiQCzM89RBveuUvrK?width=933&height=1131&cropmode=none)
+![反向代理](https://assets.beyh.net/220503-2.png)
 
 之后执行如下命令，删除刚才应用的规则，以还原系统原来的默认配置。
 
@@ -451,7 +453,7 @@ Netfilter在五个点拦截报文，每个拦截点对应iptable的一个chain
 
 首先使用wireshark抓包，通过虚拟机访问支持http的网站[Welcome To PKU JudgeOnline (poj.org)](http://poj.org/)，进行登录操作然后抓包，可以看到浏览器发出的POST请求是明文显示的，可以看到登录时输入的用户名和密码。
 
-![wireshark抓包](https://bl6pap004files.storage.live.com/y4m5Lqxuf2MGNsT_LqQVK7fallkxt9XhBsQGyEU9O2fZK2MGuaYS7QYKwOv1tkmbepg58dZkgHVmO5qq23iMetJryPay1JveTiKmgF-mfXBdh2-RVmvTqjkI8X3BDlTUcwTuDMaCxQqEzG1_3A6tYJb35dKgCnw5wByr5qdPQbhruudfKA6ag-lUCcJmftWKwyR?width=1105&height=1075&cropmode=none)
+<!-- ![wireshark抓包](https://bl6pap004files.storage.live.com/y4m5Lqxuf2MGNsT_LqQVK7fallkxt9XhBsQGyEU9O2fZK2MGuaYS7QYKwOv1tkmbepg58dZkgHVmO5qq23iMetJryPay1JveTiKmgF-mfXBdh2-RVmvTqjkI8X3BDlTUcwTuDMaCxQqEzG1_3A6tYJb35dKgCnw5wByr5qdPQbhruudfKA6ag-lUCcJmftWKwyR?width=1105&height=1075&cropmode=none) -->
 
 ### 根据URL过滤报文
 
@@ -530,16 +532,10 @@ checksec
 
 ## 参考链接
 
-[信息安全课程11：防火墙（iptables/netfilter） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/59923208)
-
-[信息安全课程12：防火墙（netfilter/iptables） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/61343421)
-
-[iptables 从入门到应用 - FrankB - 博客园 (cnblogs.com)](https://www.cnblogs.com/frankb/p/7427944.html)
-
-[使用iptables实现反向代理 - 简书 (jianshu.com)](https://www.jianshu.com/p/09200aa50be4)
-
-[MIT 6.858: Computer Systems Security 计算机系统安全 实验1 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/258405554)
-
-[信息安全 · see you again/ustc_sse_lesson - 码云 - 开源中国 (gitee.com)](https://gitee.com/fragile_xia/ustc_sse_lesson/tree/master/信息安全)
-
-[实验三问答 · 语雀 (yuque.com)](https://www.yuque.com/docs/share/d62b73cc-e91f-419a-b06e-2db5e79bc0b3)
+1. [信息安全课程11：防火墙（iptables/netfilter） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/59923208)
+2. [信息安全课程12：防火墙（netfilter/iptables） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/61343421)
+3. [iptables 从入门到应用 - FrankB - 博客园 (cnblogs.com)](https://www.cnblogs.com/frankb/p/7427944.html)
+4. [使用iptables实现反向代理 - 简书 (jianshu.com)](https://www.jianshu.com/p/09200aa50be4)
+5. [MIT 6.858: Computer Systems Security 计算机系统安全 实验1 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/258405554)
+6. [信息安全 · see you again/ustc_sse_lesson - 码云 - 开源中国 (gitee.com)](https://gitee.com/fragile_xia/ustc_sse_lesson/tree/master/信息安全)
+7. [实验三问答 · 语雀 (yuque.com)](https://www.yuque.com/docs/share/d62b73cc-e91f-419a-b06e-2db5e79bc0b3)

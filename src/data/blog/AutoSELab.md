@@ -4,10 +4,12 @@ description: 汽车软件工程课程Lab
 author: Johnny
 pubDatetime: 2022-6-21T15:56:56Z
 featured: false
-draft: true
+draft: false
 tags:
   - Course Lab
 ---
+
+> 在数据迁移过程中图片文件丢失，所以本篇博客没有图片。
 
 # Lab1
 
@@ -69,7 +71,7 @@ make -j8
 
 两个样例程序全部编译完成后，在容器开启三个终端。首先执行  `roscore`  命令，然后分别执行 `./helloworld_publisher` 与 `./helloword_subscriber` 即可。注意，如果文件夹移动了，需要删除 `build` 目录下的 `CMakeCache.txt` ，再进行 `cmake` ，或者删除重建 `build` 文件夹也可。运行效果如图：
 
-![](https://bl6pap004files.storage.live.com/y4mJBMgQjM9xldV2Pn4bEJWX3hrGoxCHhffHAMEigE4Naj_AgCejtLLhDtpDpnqePNOyFBklPb8RtyuLBAXiKeWJfx1a7FwGymM6mfJPzYpNH4ZwWCX3eO8FZujpg9J5tLQ_J-8Vs9SGuF9WY2_0l7-HwH1buhy3MWB0kUsuVI-YP1GL50IMTZCb9l_atqnl_XV?width=1314&height=847&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4mJBMgQjM9xldV2Pn4bEJWX3hrGoxCHhffHAMEigE4Naj_AgCejtLLhDtpDpnqePNOyFBklPb8RtyuLBAXiKeWJfx1a7FwGymM6mfJPzYpNH4ZwWCX3eO8FZujpg9J5tLQ_J-8Vs9SGuF9WY2_0l7-HwH1buhy3MWB0kUsuVI-YP1GL50IMTZCb9l_atqnl_XV?width=1314&height=847&cropmode=none) -->
 
 ## 遇到的问题&解决办法
 
@@ -103,13 +105,13 @@ make -j8
 
 修改如图所示的代码即可：
 
-![](https://bl6pap004files.storage.live.com/y4m779OzCedHFCjfSyTxrInU36emuvEhir5v-n0Hdghc0lCY7qK297ttLsi1FPlIDbRwGR4tYqKAW8FBxdT_xHS4JJY_wipVWsFsKGByA5Fk6JHcAXC0_pNPfly4y3XLsSCgZRBPdieipATImaJ1An8CBExJvFdt4e3IbU_fqeLeMMlD6Y8nMu3-fnTLnBDZM-d?width=1042&height=752&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4m779OzCedHFCjfSyTxrInU36emuvEhir5v-n0Hdghc0lCY7qK297ttLsi1FPlIDbRwGR4tYqKAW8FBxdT_xHS4JJY_wipVWsFsKGByA5Fk6JHcAXC0_pNPfly4y3XLsSCgZRBPdieipATImaJ1An8CBExJvFdt4e3IbU_fqeLeMMlD6Y8nMu3-fnTLnBDZM-d?width=1042&height=752&cropmode=none) -->
 
 ## 编写基于服务的同步通信应用程序
 
 实验要求更改示例代码中的.srv 文件，实现自己的服务。我实现的是对三个整数求和并返回，只需要再示例代码的基础上，分别简单修改 `TestAddTwoInts.srv` 、 `server.cpp` 、 `client.cpp` 文件，添加一个变量c即可。运行效果如图：
 
-![](https://bl6pap004files.storage.live.com/y4maPUYzlrB_fu7HHEqEg4isVbgqYZekpu61F674DDd57LVRzwnPnSf6MmWUDpEX8--fGQzCAHHitFXvzvTL1RuKfvIv0ZH-IKQr2U4ojlYu_ZRfVVFgwRlaU1Q2-XQDv3Df58_YJf-cYDDbuz154KjQB3-elzshUiokk6g7iiX_-IFpAhiX8F0Sdb4AXp5lQNR?width=1227&height=501&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4maPUYzlrB_fu7HHEqEg4isVbgqYZekpu61F674DDd57LVRzwnPnSf6MmWUDpEX8--fGQzCAHHitFXvzvTL1RuKfvIv0ZH-IKQr2U4ojlYu_ZRfVVFgwRlaU1Q2-XQDv3Df58_YJf-cYDDbuz154KjQB3-elzshUiokk6g7iiX_-IFpAhiX8F0Sdb4AXp5lQNR?width=1227&height=501&cropmode=none) -->
 
 ## 两者之间的区别&应用场景
 
@@ -141,22 +143,22 @@ make -j8
 
 通过修改 `pub.cpp` 中的 `ros::Rate` 控制发布者发布消息的频率，观察不同频率下通信延迟的变化。依次使用 5HZ、10HZ、20HZ、50HZ，消息大小4MB，使用UDP通信。可以看到随着频率的增加，通信延迟也相应增加了。
 
-![](https://bl6pap004files.storage.live.com/y4mSyG4lAojKaw7lmzsw1mEA71mIVZwOIVNTp65yyqpYsYY3tUIgqr5GmAnLhjgsUkpnWNM075m5kyU3O9I7ahx0kXP4WYV52Rfh3ucRsmcrHnMD4mKl7EblRmlOcFEqs33qRCJUJ5HveheGvNHvUExlwBktB-Z03ffpc-uli7SGJ8hw80HcU5hPvh-MTrVRdJ5?width=1200&height=1200&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4mSyG4lAojKaw7lmzsw1mEA71mIVZwOIVNTp65yyqpYsYY3tUIgqr5GmAnLhjgsUkpnWNM075m5kyU3O9I7ahx0kXP4WYV52Rfh3ucRsmcrHnMD4mKl7EblRmlOcFEqs33qRCJUJ5HveheGvNHvUExlwBktB-Z03ffpc-uli7SGJ8hw80HcU5hPvh-MTrVRdJ5?width=1200&height=1200&cropmode=none) -->
 
 ## 分析消息大小对通信性能的影响
 
 通过修改 `pub.cpp` 中的 `frame_id` 的数据大小，观察不同消息大小下通信延迟的变化。消息大小运用了 C++中的 `std::string` ，`std::string` 里的元素由一个个 `char` 类型 组成，一个 `char` 类型大小正好为 1 字节，所以只需要将 `string` 里的元素填充至固定长度即可模拟消息的大小。消息大小分别选择 1KB、100KB、1M、4M ，通信频率统一为10HZ，使用UDP通信。可以看到随着消息大小的增加，通信延迟也相应增加了。
 
-![](https://bl6pap004files.storage.live.com/y4m7UGoNUH3c1TtrRX6_VlyRL8kDI9UqExL80eMCrg1CyVzf1xS6Yeqsi87q8REryVSFQulx1JIxXvBejSDBUEyLEshNACQY5Q2cm0yFLdMbYsrIljFZVqMmor3SecWCBv-9K9UZ8qPLNV0mlYmtJa84wP31JHlgJlLLcgFAg9bCpSFpZnes_b6ak7swzbnGag_?width=1200&height=1200&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4m7UGoNUH3c1TtrRX6_VlyRL8kDI9UqExL80eMCrg1CyVzf1xS6Yeqsi87q8REryVSFQulx1JIxXvBejSDBUEyLEshNACQY5Q2cm0yFLdMbYsrIljFZVqMmor3SecWCBv-9K9UZ8qPLNV0mlYmtJa84wP31JHlgJlLLcgFAg9bCpSFpZnes_b6ak7swzbnGag_?width=1200&height=1200&cropmode=none) -->
 
 ## 分析通信方式对通信性能的影响
 
 通过修改 `sub.cpp` 中的订阅者通信方式为 `UDP`，观察不同通信方式下通信延迟的变化， 更 换 为 `UDP` 通 信 方 式 只 需 要 在 `ros::Subscriber` 的 构 造 函 数 最 后 加 上`ros::TransportHints().unreliable().maxDatagramSize` 即可。消息大小为4M ，通信频率统一为10HZ。 `maxDatagramSize` 分别为100、500、1000。可以看出TCP通信延迟最低，在UDP通信中，随着 `maxDatagramSize` 的增加，通信延迟也随着降低。
 
-![](https://bl6pap004files.storage.live.com/y4mkUJGzIytt09aS7FKVwGe6xMnYYoeVSqX9Nuv7teDKUTCpKC-7LP1intpHQ8sz9paREn1jTETATPD5WVLI_aKwIfPx0C-E-T5-A31_bN7cpz-WNeb9_7cQLzT257-wGhfY5AbT4fQI-NBhyK6yIHXWswaJXPPcWvOrrO5qFJXIj_freXa-Q37Yx9kfCMoTNkg?width=1200&height=1200&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4mkUJGzIytt09aS7FKVwGe6xMnYYoeVSqX9Nuv7teDKUTCpKC-7LP1intpHQ8sz9paREn1jTETATPD5WVLI_aKwIfPx0C-E-T5-A31_bN7cpz-WNeb9_7cQLzT257-wGhfY5AbT4fQI-NBhyK6yIHXWswaJXPPcWvOrrO5qFJXIj_freXa-Q37Yx9kfCMoTNkg?width=1200&height=1200&cropmode=none) -->
 
 ## 分析消息订阅者数量对通信性能的影响
 
 新增订阅者的代码已经放在例子中，有一个写好的模板，只需要照抄已有的订阅者代码即可。消息大小为4M ，通信频率统一为10HZ，使用UDP通信，`maxDatagramSize` 为100。可以看到随着订阅者数量增加，通信延迟也会增加。
 
-![](https://bl6pap004files.storage.live.com/y4mdRuE055OFwboceAWOVeF9Ra4V1n65Kjjo2VpAG2l50IIVgSWEUFWVjl4Zc_lpppx2Blmg164SUGmmp6gvHo5HkEV8VZS7HV41H56Nv1j7PL24pSOZilU2PUKuEY8wDxAz-xiJY-2-YeC7ThmOzBgYFBXkh32_QT59wL5xUy5O0OgqzPLhHIi47AGc8SB08rv?width=1200&height=610&cropmode=none)
+<!-- ![](https://bl6pap004files.storage.live.com/y4mdRuE055OFwboceAWOVeF9Ra4V1n65Kjjo2VpAG2l50IIVgSWEUFWVjl4Zc_lpppx2Blmg164SUGmmp6gvHo5HkEV8VZS7HV41H56Nv1j7PL24pSOZilU2PUKuEY8wDxAz-xiJY-2-YeC7ThmOzBgYFBXkh32_QT59wL5xUy5O0OgqzPLhHIi47AGc8SB08rv?width=1200&height=610&cropmode=none) -->

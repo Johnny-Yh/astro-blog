@@ -29,10 +29,9 @@ tags:
 
 ![](https://assets.beyh.net/20250317-1.avif)
 
-受限于FCLK的带宽，AIDA64的跑分并没有很高，甚至比不上6000频率+2200Mhz FCLK的搭配，这里的延迟是关闭了延迟杀手的情况下的延迟，开启后会延迟还可以下降5ns左右。对比5年前的Ryzen5 3600的测试，虽然写入提升明显，但是读取复制和延迟的提升都很有限，很难不吐槽AMD辣鸡的FCLK...
+受限于FCLK的带宽，AIDA64的跑分并没有很高，甚至比不上6000频率+2200Mhz FCLK的搭配，这里的延迟是关闭了延迟杀手的情况，开启后延迟还可以下降5ns左右。对比5年前的Ryzen5 3600的测试，虽然写入提升明显，但是读取复制和延迟的提升都很有限，很难不吐槽AMD辣鸡的FCLK...
 
 # 参考链接：
 
-1. [【内存】单条16G之王！英睿达16G*2 C9BLH颗粒Zen3平台作业](https://www.bilibili.com/read/cv9709830)
-2. [DDR4 5500! 英睿达C9BLH超频测试](https://post.smzdm.com/p/adwegr8k/)
-3. [G.skill 2x16GB DDR5-8000 CL38 EXPO optimized memory timings, MSI X870 Tomahawk](https://www.youtube.com/watch?v=zklO7OVVjHQ&t=1562s)
+1. [G.skill 2x16GB DDR5-8000 CL38 EXPO optimized memory timings, MSI X870 Tomahawk](https://www.youtube.com/watch?v=zklO7OVVjHQ&t=1562s)
+2. [来一点9950X B650M 8000MHz内存作业](https://www.chiphell.com/forum.php?mod=viewthread&tid=2652056)
