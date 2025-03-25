@@ -1,5 +1,5 @@
 ---
-title: 📖找实习的感受
+title: 📖找实习的经历
 description: 暑期实习很难找哇😭
 author: Johnny
 pubDatetime: 2022-5-10T14:32:00Z
